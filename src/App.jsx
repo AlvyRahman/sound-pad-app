@@ -6,7 +6,7 @@ function App() {
   const [pad, setPad] = React.useState(pads);
 
   const allPads = pad.map(p => 
-    <Pad id={p.id} color={p.color}/>
+    <Pad id={p.id} color={p.color} on={p.on}/>
   )
 
   return (
