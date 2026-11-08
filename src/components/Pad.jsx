@@ -7,7 +7,7 @@ export default function Pad(p)
     return(
         <button key={p.id} 
         style={style}
-        className={p.on ? "on" : null}
+        className={p.on ? "on" : undefined}
         >
         </button>
     )
