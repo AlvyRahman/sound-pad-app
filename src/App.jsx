@@ -1,9 +1,19 @@
+import pads from "./pads"
+import React from "react"
+
 function App() {
+  const [pad, setPad] = React.useState(pads);
+
+  const allPads = pad.map(p => 
+    <button>p.id</button>
+  )
 
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <main>
+      <div className="pad-container">
+        {allPads}
+      </div>
+    </main>
   )
 }
 
