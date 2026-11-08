@@ -5,7 +5,7 @@ function App() {
   const [pad, setPad] = React.useState(pads);
 
   const allPads = pad.map(p => 
-    <button>p.id</button>
+    <button key={p.id}>p.id</button>
   )
 
   return (
