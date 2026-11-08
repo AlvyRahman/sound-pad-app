@@ -1,11 +1,12 @@
 import pads from "./pads"
 import React from "react"
+import Pad from "./components/Pad";
 
 function App() {
   const [pad, setPad] = React.useState(pads);
 
   const allPads = pad.map(p => 
-    <button key={p.id}>p.id</button>
+    <Pad id={p.id}/>
   )
 
   return (
