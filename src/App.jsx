@@ -5,8 +5,14 @@ import Pad from "./components/Pad";
 function App() {
   const [pad, setPad] = React.useState(pads);
 
+  function toggleOn(id) {
+    setPad(prevPads => prevPads.map(item => {
+      return item.id === id ? {...item, on: !item.on} : item
+    }))
+  }
+
   const allPads = pad.map(p => 
-    <Pad id={p.id} color={p.color} on={p.on}/>
+    <Pad id={p.id} color={p.color} on={p.on} toggleOn={toggleOn}/>
   )
 
   return (
